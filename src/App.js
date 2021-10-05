@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import Search from './components/search'
+import Books from './components/books'
+import React, { useState } from 'react'
 import './App.css';
 
+
+
+const url = 'https://www.googleapis.com/books/v1/volumes?q='
+
+
 function App() {
+
+  const [keyword, setKeyword] = useState('')
+  const [books, setBooks] = useState([])
+
+  const handleInput = (e) => {
+    setKeyword(e.currentTarget.value)
+  }
+  const handleSearch = async (e) => {
+    e.preventDefault()
+    const uri = url + keyword
+    if (keyword === '') return
+    setKeyword('')
+    const response = await fetch(uri)
+    const data = await response.json()
+    setBooks(data.items)
+    console.log(data)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container p-5">
+      <Search
+        handleChange={handleInput}
+        handleSubmit={handleSearch}
+        keyword={keyword}
+      />
+      <Books
+        books={books}
+      />
     </div>
   );
 }
