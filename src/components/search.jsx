@@ -10,6 +10,7 @@ const Search = ({ handleChange, handleSubmit, keyword }) => {
                     type="text"
                     onChange={handleChange}
                     value={keyword}
+                    autoFocus
                 />
                 <input
                     type="submit"
