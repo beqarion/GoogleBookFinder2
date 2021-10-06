@@ -1,10 +1,13 @@
 import React from 'react'
+import Book from './book'
 
 const Books = ({ books }) => {
     return (
-        <div className="d-flex justify-content-center flex-wrap mt-5">
+        <div
+            className="d-flex justify-content-center align-items-end flex-wrap mt-5"
+        >
             {books.map(book => {
-                return <div style={{ minWidth: "200px", height: "200px", background: "green", margin: "2px" }}></div>
+                return <Book key={book.id} book={book} />
             })}
         </div>
     )

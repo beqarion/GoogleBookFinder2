@@ -14,6 +14,7 @@ const Search = ({ handleChange, handleSubmit, keyword }) => {
                 />
                 <input
                     type="submit"
+                    className="mx-1"
                 />
             </form>
         </div>

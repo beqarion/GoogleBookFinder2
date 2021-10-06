@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <div className="container p-5">
+    <div className="container p-5" >
       <Search
         handleChange={handleInput}
         handleSubmit={handleSearch}
