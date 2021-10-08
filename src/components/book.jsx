@@ -29,13 +29,11 @@ const Book = ({ book, handleLike }) => {
             className="bg-light bg-gradient m-1 shadow d-flex flex-column justify-content-center p-3"
         >
             <div className="flex-grow-3 w-100 h-100 d-flex justify-content-center align-items-center">
-                <div>
-                    <img src={smallThumbnailUrl || thumbnailUrl} alt="" />
-                </div>
+                <img src={smallThumbnailUrl || thumbnailUrl} alt="" />
             </div>
 
             <div >
-                <h5>{cardTitle}</h5>
+                <h6>{cardTitle}</h6>
                 <p><i className="small">{authors ? "by" : ""} </i>{authors}</p>
             </div>
             <div className="d-flex justify-content-between w-100">
