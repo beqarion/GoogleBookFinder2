@@ -1,0 +1,36 @@
+.myCard{
+    width: 16rem;
+    height: 20rem;
+    box-shadow: 
+        7px 8px 8px rgba(16,15,6,0.75), 
+        3px 3px 0px 0px rgba(255,255,255,1) inset,
+        -9px -9px 40px -20px rgba(250,212,136,1);
+}
+
+
+
+/* put ... if authors text is too long */
+.trunkateIt {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 3rem;
+    text-align: justify;
+    margin-right: 1em;
+    padding-right: 1em;
+  }
+  .trunkateIt::before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .trunkateIt::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: white;
+  }

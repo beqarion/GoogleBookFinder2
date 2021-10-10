@@ -1,10 +1,11 @@
 import React from 'react'
+import '../css/search.css'
 
 const Search = ({ handleChange, handleSubmit, keyword }) => {
 
 
     return (
-        <div className="d-flex justify-content-center">
+        <div className="search-box d-flex justify-content-center">
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
