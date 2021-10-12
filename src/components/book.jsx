@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Like from './common/like'
 import '../css/book.css'
 
@@ -27,7 +28,9 @@ const Book = ({ book, handleLike }) => {
                 <p className="trunkateIt small mb-0 mt-1"><i>{authors ? "by" : ""} </i>{authors}</p>
             </div>
             <div className="d-flex justify-content-between align-items-center bg-secondary bg-opacity-10 rounded p-2">
-                <button className="btn btn-secondary text-white">Details</button>
+                <Link to={`details/${book.id}`}>
+                    <button className="btn btn-secondary text-white">Details</button>
+                </Link>
                 <Like target={book} handleLike={handleLike} />
             </div>
 
