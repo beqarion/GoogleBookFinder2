@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Input from './common/input'
 
 const LoginForm = () => {
     const [account, setAccount] = useState({ username: "", password: "" })
@@ -15,28 +16,18 @@ const LoginForm = () => {
         <div>
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="username"></label>
-                    <input
-                        id="username"
-                        name="username"
-                        type="text"
-                        className="form-control"
-                        value={account.username}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password"></label>
-                    <input
-                        id="password"
-                        name="password"
-                        type="text"
-                        className="form-control"
-                        onChange={handleChange}
-                        value={account.password}
-                    />
-                </div>
+                <Input
+                    name="username"
+                    label="Login"
+                    value={account.username}
+                    onChange={handleChange}
+                />
+                <Input
+                    name="password"
+                    label="Password"
+                    value={account.password}
+                    onChange={handleChange}
+                />
                 <button className="btn btn-primary mt-3">Login</button>
             </form>
         </div>

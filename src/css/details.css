@@ -1,6 +1,16 @@
 #container{
     margin-top:1rem;
+    padding: 1rem;
+    padding-bottom:3rem;
+    
     display:flex;
+    border-radius:5px;
+    box-shadow: 
+        3px 3px 3px 1px rgba(3, 3, 5, 0.3), 
+        3px 3px 3px 0px rgba(255,255,255,1) inset,
+        -3px -3px 3px 0px rgba(66, 66, 64, 0.1) inset,
+        0px 0px 5px 5px rgba(250,212,136,0.1);
+    background: white;
 }
 #image{
     margin-right:1rem;
