@@ -3,10 +3,17 @@
 } */
 #logo{
     cursor: pointer;
-    padding: 0.5rem !important;;
+    padding: 0 !important;
+    background-color:lightgoldenrodyellow;
+    width:45px;
+    height:45px;
+    mask: url(../logo.svg) no-repeat center;
+    transition: background-color 300ms;
 }
+
+
 #logo:hover{
-    background: none!important;
+    background-color: lightseagreen!important;
 }
 .topnav{
     overflow: hidden;

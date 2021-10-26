@@ -29,7 +29,7 @@ const Book = ({ book, handleLike }) => {
             </div>
             <div className="d-flex justify-content-between align-items-center bg-secondary bg-opacity-10 rounded p-2">
                 <Link to={`details/${book.id}`}>
-                    <button className="btn btn-secondary text-white">Details</button>
+                    <button className="btn btn-secondary text-white">Read More</button>
                 </Link>
                 <Like target={book} handleLike={handleLike} />
             </div>

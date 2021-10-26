@@ -12,6 +12,7 @@ const Search = ({ handleChange, handleSubmit, keyword }) => {
                     onChange={handleChange}
                     value={keyword}
                     autoFocus
+                    placeholder="Search books here"
                 />
                 <input
                     type="submit"
